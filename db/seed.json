@@ -1,0 +1,26 @@
+[
+  {
+   "firstname" : "Lyndsey",
+   "lastname" : "Newsome",
+   "email" : "Lyndseynewsome@gmail.com",
+   "neighborhood" : "Deanwood/Kenilworth",
+   "video_url" : "",
+   "state" : "DC",
+   "city" : "Washington"
+ },
+{
+  "firstname" : "Matthew",
+  "lastname" : "Kerns",
+  "email" : "matthewkerns@ymail.com",
+  "neighborhood" : "PG County",
+  "city" : "Upper Marlboro",
+  "state" : "MD"
+},
+{
+  "firstname" : "Anissa",
+  "lastname" : "Jones",
+  "email" : "anissajones10@gmail.com",
+  "city" : "Detroit",
+  "state" : "MI"
+}
+]
