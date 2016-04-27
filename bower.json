@@ -1,0 +1,20 @@
+{
+  "name": "gentrification2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "KAIRA N. JOHNSON <KJOHNSON1913@GMAIL.COM>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}

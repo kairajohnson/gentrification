@@ -1,1 +1,8 @@
-console.log("JS");
+"use strict";
+
+(function(){
+angular
+.module("Gentrification", [
+
+])
+})();
