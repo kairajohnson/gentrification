@@ -6,7 +6,8 @@ angular
 "ui.router"
 ])
 
-.config(Router);
+.config(Router)
+.controller("homeIndexController", homeIndexCtrl);
 
   Router.$inject = ["$stateProvider", "$locationProvider",
 "$urlRouterProvider"];
@@ -14,13 +15,23 @@ angular
     $locationProvider.html5Mode(true);
     $stateProvider
     .state("home", {
-      url:      "/home",
-      template: "<h1> homepage </h1>"
+      url:      "/",
+      templateUrl: "/html/home-index.html",
+      controller: "homeIndexController",
+      controllerAs: "homeVM"
     })
     .state("archive", {
       url:      "/archive",
-      template: "<h1>archive page</h1>"
+      templateUrl: "<h1>archive page</h1>"
     });
     $urlRouterProvider.otherwise("/");
+  }
+  function homeIndexCtrl(){
+    var vm = this;
+    vm.contributors = [
+      {name:"Nikki"},
+      {name:"Yasmin"},
+      {name:"Wayne"}
+    ];
   }
 })();
