@@ -1,9 +1,9 @@
 
-<h1>There are {{homeVM.contributors.length}} contributors</h1
+<h1>There are {{homeVM.contributors.length}} contributors</h1>
 
   <ul>
     <li data-ng-repeat="contributor in homeVM.contributors">
-      <a data-ui-sref="filterByState(states)"{{states.state}}</a>
-      {{contributor.name}}
+      <a data-ui-sref="filterByState(states)">  {{contributor.name}} </a>
+
     </li>
   </ul>

@@ -3,10 +3,12 @@
 (function(){
 angular
 .module("Gentrification", [
-"ui.router"
+"ui.router",
+"ngResource"
 ])
 
 .config(Router)
+.factory("Contributor", contributorFactory)
 .controller("homeIndexController", homeIndexCtrl)
 .controller("stateController", stateIndexCtrl);
 
@@ -29,13 +31,18 @@ angular
     });
     $urlRouterProvider.otherwise("/");
   }
-  function homeIndexCtrl(){
+
+  contributorFactory.$inject= ["$resource"];
+  function contributorFactory($resource){
+    var Contributor = $resource("/api/contributors");
+    return Contributor;
+  }
+
+  homeIndexCtrl.$inject = ["Contributor"];
+  function homeIndexCtrl(Contributor){
     var vm = this;
-    vm.contributors = [
-      {name:"Nikki"},
-      {name:"Yasmin"},
-      {name:"Wayne"}
-    ];
+    vm.contributors = Contributor.query();
+    console.log(Contributor)
   }
 
   stateIndexCtrl.$inject= ["$stateParams"];
