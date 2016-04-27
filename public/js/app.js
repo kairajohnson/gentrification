@@ -7,7 +7,8 @@ angular
 ])
 
 .config(Router)
-.controller("homeIndexController", homeIndexCtrl);
+.controller("homeIndexController", homeIndexCtrl)
+.controller("stateController", stateIndexCtrl);
 
   Router.$inject = ["$stateProvider", "$locationProvider",
 "$urlRouterProvider"];
@@ -20,9 +21,11 @@ angular
       controller: "homeIndexController",
       controllerAs: "homeVM"
     })
-    .state("archive", {
-      url:      "/archive",
-      templateUrl: "<h1>archive page</h1>"
+    .state("filterByState", {
+      url:      "/:state",
+      templateUrl: "/html/state.html",
+      controller: "stateController",
+      controllerAs: "stateVM"
     });
     $urlRouterProvider.otherwise("/");
   }
@@ -34,4 +37,11 @@ angular
       {name:"Wayne"}
     ];
   }
+
+  stateIndexCtrl.$inject= ["$stateParams"];
+  function stateIndexCtrl($stateParams){
+      var vm = this;
+      vm.states = $stateParams;
+      // console.dir($stateParams);
+    };
 })();
