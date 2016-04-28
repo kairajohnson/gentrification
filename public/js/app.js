@@ -4,14 +4,21 @@
 angular
 .module("Gentrification", [
 "ui.router",
-"ngResource"
+"ngResource",
+"anguvideo"
 ])
 
 .config(Router)
 .factory("Contributor", contributorFactory)
 .controller("homeIndexController", homeIndexCtrl)
 .controller("stateController", stateIndexCtrl)
-.controller("uploadController", uploadCtrl);
+.controller("uploadController", uploadCtrl)
+.controller("AppCtrl", ['$scope', function ($scope) {
+    $scope.youTubeURL = "https://www.youtube.com/watch?v=-_4WnmaEJWQ";
+    $scope.youTubeShareURL = "";
+    $scope.youTubeEmbededURL = "";
+    $scope.vimeoURL = "";
+}]);
 
   Router.$inject = ["$stateProvider", "$locationProvider",
 "$urlRouterProvider"];

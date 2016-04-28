@@ -4,7 +4,7 @@
    "lastname" : "Newsome",
    "email" : "Lyndseynewsome@gmail.com",
    "neighborhood" : "Deanwood/Kenilworth",
-   "video_url" : "",
+   "video_url" : "https://www.youtube.com/watch?v=T1P1N8GGTjA",
    "state" : "DC",
    "city" : "Washington"
  },
@@ -13,12 +13,14 @@
   "lastname" : "Kerns",
   "email" : "matthewkerns@ymail.com",
   "neighborhood" : "PG County",
+  "video_url": "https://www.youtube.com/watch?v=-_4WnmaEJWQ",
   "city" : "Upper Marlboro",
   "state" : "MD"
 },
 {
   "firstname" : "Anissa",
   "lastname" : "Jones",
+  "video_url":"",
   "email" : "anissajones10@gmail.com",
   "city" : "Detroit",
   "state" : "MI"
