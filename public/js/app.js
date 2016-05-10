@@ -13,37 +13,9 @@ angular
 .controller("homeIndexController", homeIndexCtrl)
 .controller("stateController", stateIndexCtrl)
 .controller("uploadController", uploadCtrl)
-.controller("AppCtrl", ['Contributor', function (Contributor) {
-  var vm = this;
-  Contributor.query(function(contributors){
-    var video_url   = contributors[0].video_url
-    vm.contributors = contributors;
-    vm.youTubeURL=  '"' + video_url + '"';
-    vm.youTubeShareURL = "";
-    vm.youTubeEmbededURL = "";
-    vm.vimeoURL = "";
-    console.log(vm.youTubeURL)
-  });
-}]);
 
 
 
-
-
-/*['$scope', 'Contributor', function ($scope, Contributor) {
-  var vm = this;
-  vm.contributors = Contributor.query();
-  var video_url = contributors.video_url
-  console.log(contributors)
-    contributors.then(function(){
-      $scope.youTubeURL = video_url;
-      //  "https://www.youtube.com/watch?v=-_4WnmaEJWQ";
-      $scope.youTubeShareURL = "";
-      $scope.youTubeEmbededURL = "";
-      $scope.vimeoURL = "";
-
-    })
-}]);*/
 
   Router.$inject = ["$stateProvider", "$locationProvider",
 "$urlRouterProvider"];
@@ -56,12 +28,18 @@ angular
       controller: "homeIndexController",
       controllerAs: "homeVM"
     })
-    .state("uploadVideo", {
+    .state("upload", {
       url:      "/upload",
       templateUrl: "/html/upload.html",
       controller: "uploadController",
       controllerAs: "uploadVM"
     })
+
+    .state("about", {
+      url:      "/about",
+      templateUrl: "/html/about.html"
+    })
+
     .state("filterByState", {
       url:      "/:state",
       templateUrl: "/html/state.html",
@@ -81,13 +59,27 @@ angular
   homeIndexCtrl.$inject = ["Contributor"];
   function homeIndexCtrl(Contributor){
     var vm = this;
-    vm.contributors = Contributor.query();
-    }
+    Contributor.query().$promise.then(function(contributors) {
+        var index = Math.floor(Math.random()*contributors.length);
+        var video_url = contributors[index].video_url;
+      vm.youTubeURL= video_url;
+
+      // var video_url   = contributors.video_url
+        // vm.contributors = "";
+      // vm.contributors = contributors;
+      // //  "https://youtu.be/4s_NHllP0n8?list=PLzf7wzT7SlE3UDlqODOQSWLcsfefesq4x"
+      // //
+      // vm.youTubeShareURL = "";
+      // vm.youTubeEmbededURL = "";
+      // vm.vimeoURL = "";
+    });
+  }
 
   stateIndexCtrl.$inject= ["$stateParams"];
   function stateIndexCtrl($stateParams){
       var vm = this;
       vm.states = $stateParams;
+
     };
 
     uploadCtrl.$inject = ["Contributor"];

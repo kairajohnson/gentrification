@@ -14,12 +14,18 @@
 <body data-ng-app ="Gentrification">
   <header>
     <div class="site-name" style="float: left;">
-      <a data-ui-sref="/"> GENTRIFICATION </a>
+      <a data-ui-sref="home"> GENTRIFICATION </a>
     </div>
     <div class="nav" style="float: right;">
       <ul>
+      <li><a data-ui-sref="home"> Home </a>
+      </li>
+
       <a data-ui-sref="about"> <li>About</li></a>
-        <a data-ui-sref="filterByState(states)"><li>Search By</li></a>
+        <li>
+          <a data-ui-sref="filterByState(states)">Search By</a>
+               <li> {{contributors.state}} </li></a>
+          </li>
         <a data-ui-sref="upload"><li>Upload A Video</li></a>
         <a data-ui-sref="contact"><li>Contact</li></a>
       </ul>

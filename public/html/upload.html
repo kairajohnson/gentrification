@@ -1,2 +1,23 @@
-<input type="text" data-ng-model="uploadVM.newContributor.firstname" />
-<button type="button" data-ng-click="uploadVM.create()"> UPLOAD </button>
+
+<h1 class = "site-heading"> Join the conversation and upload your video <h1>
+
+  <h3 class="section-title"> Guidelines </h3>
+
+  <div class="guidelines">
+    <ul>
+      <li> <p>No person or group of people can be referenced in any dirogatory or racially charged mannor. </p></li>
+      <li> <p>You cannot target or out any particular person. </p></li>
+      <li> <p>Any uploads should be for the purpose of understanding, education, and relatability. Any uploads that does not promote positive dialogue will not be uploaded. </p></li>
+    </ul>
+  </div>
+
+<h3 class="section-title"> Upload Here </h3>
+
+<form id="uploadForm">
+<input type="text" data-ng-model="uploadVM.newContributor.name" placeholder="Name" width="100%"></input>
+<input type="text" data-ng-model="uploadVM.newContributor.city" placeholder="City" width="50%"></input>
+<input type="text" data-ng-model="uploadVM.newContributor.state" placeholder="State Initials...." width="10%"></input>
+<input type="text" data-ng-model="uploadVM.newContributor.neighborhood" placeholder="Neighborhood" width="50%"></input>
+<input type="text" data-ng-model="uploadVM.newContributor.video_url" placeholder="Paste your video URL...." width="100%"></input>
+<button type="button" id="button" data-ng-click="uploadVM.create()"> UPLOAD </button>
+</form>

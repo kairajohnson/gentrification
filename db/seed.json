@@ -1,7 +1,6 @@
 [
   {
-   "firstname" : "Lyndsey",
-   "lastname" : "Newsome",
+   "name" : "Lyndsey Newsome",
    "email" : "Lyndseynewsome@gmail.com",
    "neighborhood" : "Deanwood/Kenilworth",
    "video_url" : "https://www.youtube.com/watch?v=T1P1N8GGTjA",
@@ -9,8 +8,7 @@
    "city" : "Washington"
  },
 {
-  "firstname" : "Matthew",
-  "lastname" : "Kerns",
+  "name" : "Matthew Kerns",
   "email" : "matthewkerns@ymail.com",
   "neighborhood" : "PG County",
   "video_url": "https://www.youtube.com/watch?v=-_4WnmaEJWQ",
@@ -18,9 +16,8 @@
   "state" : "MD"
 },
 {
-  "firstname" : "Anissa",
-  "lastname" : "Jones",
-  "video_url":"",
+  "name" : "Anissa Jones",
+  "video_url":"https://youtu.be/4s_NHllP0n8",
   "email" : "anissajones10@gmail.com",
   "city" : "Detroit",
   "state" : "MI"

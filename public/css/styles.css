@@ -23,6 +23,26 @@ h1 {
   font-size: 62px;
 }
 
+h3 {
+  font-family: "bebas";
+  font-size: 28px;
+}
+}
+
+p {
+  font-size: 18px;
+  font-family: serif;
+  font-weight: 100;
+}
+
+input {
+  width: 150px;
+  height: 15px;
+  border: 1px solid black;
+  color: black;
+  padding: 3px 6px;
+}
+
 .site-name {
   color: white;
   font-size: 28px;
@@ -56,4 +76,52 @@ iframe {
 
 .ytp-title-link, .ytp-title-channel-name {
   display: none;
+}
+
+.about {
+  padding: 2% 7%;
+}
+
+.site-heading {
+  margin-top: 10%;
+}
+
+.section-title {
+  margin-top: 5%;
+}
+
+.guidelines {
+  width: 500px;
+  text-align: left;
+  margin: auto;
+  padding-top: 2%;
+}
+
+#uploadForm {
+  padding-top: 2%;
+}
+
+#button {
+  border: 1px black solid;
+    background-color: black;
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder {
+   color: black;
+}
+
+::-moz-placeholder {
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
 }
